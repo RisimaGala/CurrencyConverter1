@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.currencyconverter1.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_converterFragment"
+            app:destination="@id/converterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.currencyconverter1.ui.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_converterFragment"
+            app:destination="@id/converterFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="com.example.currencyconverter1.ui.converter.ConverterFragment"
+        android:label="Currency Converter"
+        tools:layout="@layout/fragment_converter">
+        <action
+            android:id="@+id/action_converterFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_converterFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.currencyconverter1.ui.converter.HistoryFragment"
+        android:label="Conversion History"
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

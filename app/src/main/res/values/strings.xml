@@ -1,0 +1,21 @@
+<resources>
+
+        <string name="app_name">Currency Converter</string>
+        <string name="login">Login</string>
+        <string name="register">Register</string>
+        <string name="email">Email</string>
+        <string name="password">Password</string>
+        <string name="confirm_password">Confirm Password</string>
+        <string name="full_name">Full Name</string>
+        <string name="welcome">Welcome</string>
+        <string name="convert">Convert</string>
+        <string name="amount">Amount</string>
+        <string name="from_currency">From Currency</string>
+        <string name="to_currency">To Currency</string>
+        <string name="converted_amount">Converted Amount</string>
+        <string name="conversion_history">Conversion History</string>
+        <string name="clear_history">Clear History</string>
+        <string name="logout">Logout</string>
+        <string name="no_history">No conversion history found</string>
+
+</resources>

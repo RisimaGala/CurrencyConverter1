@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/item_background"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/fromCurrencyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="USD"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginHorizontal="8dp" />
+
+        <TextView
+            android:id="@+id/toCurrencyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EUR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Amount:"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/amountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.00"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Converted:"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/convertedAmountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="85.50"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rate:"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/rateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.855"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timestampText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2023-12-07 10:30"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:gravity="end"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

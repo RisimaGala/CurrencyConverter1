@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Welcome, User"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"
+                android:paddingVertical="8dp" />
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:minWidth="96dp"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/error"
+                android:textColor="@color/white"
+                android:paddingHorizontal="16dp" />
+
+        </LinearLayout>
+
+        <!-- API Status Indicator -->
+        <TextView
+            android:id="@+id/apiStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp"
+            android:text="Checking API..."
+            android:textColor="@color/white"
+            android:background="@color/primary"
+            android:visibility="gone" />
+
+        <!-- Loading Indicator -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Currency Converter"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/primary_dark"
+            android:layout_marginBottom="24dp"
+            android:paddingVertical="8dp" />
+
+        <!-- Live Rates Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rates_background"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💱 Live Exchange Rates (vs USD)"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"
+                android:layout_marginBottom="12dp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/liveRatesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Major Currency Rates -->
+                <TextView
+                    android:id="@+id/eurRateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EUR: Loading..."
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/gbpRateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GBP: Loading..."
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/jpyRateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JPY: Loading..."
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/cadRateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CAD: Loading..."
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/audRateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AUD: Loading..."
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- South African Rand -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/zarRateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ZAR: Loading..."
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_dark" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/ratesProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- Amount Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:hintTextColor="@color/primary_dark"
+            app:boxStrokeColor="@color/primary_dark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:minHeight="60dp"
+                android:hint="Enter Amount"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_gray"
+                android:padding="16dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- From Currency -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From Currency"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:paddingVertical="4dp" />
+
+            <Spinner
+                android:id="@+id/fromCurrencySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:minHeight="60dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- To Currency -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To Currency"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:paddingVertical="4dp" />
+
+            <Spinner
+                android:id="@+id/toCurrencySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:minHeight="60dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Swap Button -->
+        <Button
+            android:id="@+id/swapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minWidth="120dp"
+            android:text="🔄 Swap Currencies"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/accent"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="20dp" />
+
+        <!-- Conversion Loading -->
+        <ProgressBar
+            android:id="@+id/convertProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Convert Button -->
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="56dp"
+            android:text="Convert"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/primary_dark"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Result Display -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Converted Amount will appear here"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/primary_dark"
+            android:layout_marginBottom="24dp"
+            android:padding="20dp"
+            android:background="@drawable/result_background"
+            android:minHeight="80dp" />
+
+        <!-- History Button -->
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="56dp"
+            android:text="View Conversion History"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/secondary_dark"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</ScrollView>
