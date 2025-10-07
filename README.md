@@ -1,7 +1,7 @@
 💱 Currency Converter
 A modern, responsive currency converter web application that provides real-time exchange rates with an intuitive user interface. Built with pure client-side technologies for fast and reliable performance.
 
-https://via.placeholder.com/1200x600/4f46e5/ffffff?text=Currency+Converter+Application
+
 
 ✨ Features
 Real-Time Exchange Rates - Live data fetched from reliable APIs for accurate currency conversions
@@ -58,8 +58,7 @@ Open index.html in your web browser
 Option B: Local development server (recommended)
 
 bash
-# Using Python 3
-python -m http.server 8000
+
 
 # Using Node.js (if installed)
 npx http-server
