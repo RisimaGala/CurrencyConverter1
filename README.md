@@ -348,8 +348,9 @@ Issues: GitHub Issues
 ExchangeRate-API for reliable currency data
 
 Icons provided by Font Awesome
-
 Open-source community for inspiration and resources
+
+Youtube Link: https://youtu.be/OXJkN1nd8t8 
 
 <div align="center">
 ⭐ Star this repository if you find it helpful!
