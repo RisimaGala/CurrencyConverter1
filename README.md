@@ -10,15 +10,7 @@ A modern Android currency conversion application built with **Kotlin**, featurin
 
 ---
 
-<div align="center">
 
-| Conversion Screen | History | Profile |
-|:---:|:---:|:---:|
-| <img src="screenshots/converter.png" width="200"> | <img src="screenshots/history.png" width="200"> | <img src="screenshots/profile.png" width="200"> |
-
-</div>
-
----
 
 ## ✨ Features
 
@@ -253,9 +245,7 @@ bash
 # Using Node.js (if installed)
 npx http-server
 
-# Using PHP
-php -S localhost:8000
-Access the application at http://localhost:8000
+
 
 🧩 Usage Guide
 Enter Amount: Input the numerical value you want to convert
