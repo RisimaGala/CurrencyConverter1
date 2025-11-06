@@ -196,7 +196,7 @@ Quick Swap Functionality - Instant currency pair reversal with a single click
 
 Full Responsive Design - Optimized for desktop, tablet, and mobile devices
 
-Lightweight Performance - Built with vanilla JavaScript for fast loading and smooth operation
+Lightweight Performance - Built with vanilla JavaScript for fast loading and smooth operation 
 
 🚀 Live Demo
 Experience the application live: [Live Demo Link]
