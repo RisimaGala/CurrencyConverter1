@@ -355,4 +355,101 @@ Youtube Link: https://youtu.be/OXJkN1nd8t8
 <div align="center">
 ⭐ Star this repository if you find it helpful!
 
-</div>
+</div>   
+
+POE 
+💱 Currency Converter App
+
+A modern currency converter application built with Kotlin (Android) and JavaScript (Web) that provides real-time exchange rates, secure authentication, transaction history, and an intuitive interface.
+
+🎯 Purpose
+
+The Currency Converter App allows users to:
+
+Convert between 150+ global currencies in real-time
+
+Access live exchange rates from trusted APIs
+
+View and filter transaction history
+
+Save favorite currencies
+
+Use offline mode for recent conversions
+
+✨ Features
+
+🔐 User Authentication
+
+💰 Real-Time Conversion (via ExchangeRate API)
+
+📊 Transaction History
+
+🎨 Modern, Responsive UI
+
+📱 Offline Support
+
+⭐ Favorite Currencies
+
+🎤 Voice-Guided Navigation
+
+🏗️ Tech Stack
+
+Language: Kotlin, JavaScript
+
+Database: Room (SQLite)
+
+API: ExchangeRate API
+
+UI: Material Design 3
+
+Architecture: MVVM with Repository Pattern
+
+⚙️ Installation
+
+Clone the repo
+
+git clone https://github.com/RisimaGala/CurrencyConverter1.git
+cd CurrencyConverter1
+
+
+Open in Android Studio
+
+Add your API Key in local.properties:
+
+api.key=YOUR_API_KEY
+base.url=https://api.exchangerate.host/
+
+
+Run the app
+
+🧪 Testing
+
+To run tests:
+
+./gradlew test
+./gradlew connectedAndroidTest
+
+📜 Release Notes
+
+Version 1.1
+
+Added authentication
+
+Improved UI and navigation
+
+Added offline support
+
+Implemented voice-guided walkthrough
+
+📄 License
+
+This project is licensed under the MIT License
+.
+
+🙏 Acknowledgments
+
+ExchangeRate API
+
+Material Design Components
+
+Jetpack Libraries
